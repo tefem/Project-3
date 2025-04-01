@@ -1,0 +1,59 @@
+.navbar {
+    display: flex; 
+    justify-content: space-between; /* Spread elements */
+    align-items: center; /* Align items vertically */
+    background-color: #333; /* Dark background */
+    padding: 15px 20px;
+    color: white;
+}
+
+/* Style the links */
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Make links appear in a row */
+    gap: 20px; /* Space between items */
+}
+
+/* Style each list item */
+.nav-links li {
+    display: inline;
+}
+
+/* Style the actual links */
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: white;
+    font-size: 18px;
+}
+
+/* Style the hamburger menu icon */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Hide it by default */
+}
+
+/* 📌 Make the navbar responsive */
+@media (max-width: 768px) {  
+    /* Hide menu links on small screens */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Show menu when "active" class is added */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Show the hamburger menu */
+    .menu-icon {
+        display: block;
+    }
+}
